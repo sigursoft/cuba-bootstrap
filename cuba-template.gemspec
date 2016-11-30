@@ -15,6 +15,9 @@ Gem::Specification.new do |gem|
   gem.add_dependency 'cuba',             '~> 3.8'
   gem.add_dependency 'ohm',              '~> 3.0'
 
+  gem.add_development_dependency 'cutest',     '~> 1.2'
+  gem.add_development_dependency 'rack-test',  '~> 0.6'
+
   # ensure the gem is built out of versioned files
   gem.files = Dir['README*', 'LICENSE*'] & `git ls-files -z`.split("\0")
 end
