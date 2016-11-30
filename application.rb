@@ -3,7 +3,7 @@
 require 'cuba'
 require 'cuba/safe'
 
-Cuba.use Rack::Session::Cookie, :secret => 'type+in+very+long+secret+string'
+Cuba.use Rack::Session::Cookie, :secret => ENV['SECRET'] || 'type+in+very+long+secret+string'
 
 Cuba.plugin Cuba::Safe
 
