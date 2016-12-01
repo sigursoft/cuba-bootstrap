@@ -2,10 +2,13 @@
 
 require 'cuba'
 require 'cuba/safe'
+require 'cuba/render'
+require 'erb'
 
 Cuba.use Rack::Session::Cookie, :secret => ENV['SECRET'] || 'type+in+very+long+secret+string'
 
 Cuba.plugin Cuba::Safe
+Cuba.plugin Cuba::Render
 
 Cuba.define do
   on get do
