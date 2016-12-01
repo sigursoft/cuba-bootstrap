@@ -3,17 +3,25 @@
 require 'cuba'
 require 'cuba/safe'
 require 'cuba/render'
-require 'erb'
+require 'tilt/erb'
 
-Cuba.use Rack::Session::Cookie, :secret => ENV['SECRET'] || 'type+in+very+long+secret+string'
+Cuba.use Rack::Session::Cookie, secret: ENV['SECRET_COOKIE'] || 'type+in+very+long+secret+string'
 
 Cuba.plugin Cuba::Safe
 Cuba.plugin Cuba::Render
 
 Cuba.define do
+  on csrf.unsafe? do
+    csrf.reset!
+
+    res.status = 403
+    res.write('Not authorized')
+
+    halt(res.finish)
+  end
   on get do
     on 'hello' do
-      res.write 'Simple answer!'
+      render('hello')
     end
     on root do
       res.redirect '/hello'
