@@ -1,3 +1,6 @@
+#--
+# Copyright 2016 by Anton Kozik (anton.kozik@gmail.com)
+#--
 # frozen_string_literal: true
 
 require 'cuba'
@@ -13,10 +16,8 @@ Cuba.plugin Cuba::Render
 Cuba.define do
   on csrf.unsafe? do
     csrf.reset!
-
     res.status = 403
     res.write('Not authorized')
-
     halt(res.finish)
   end
   on get do
