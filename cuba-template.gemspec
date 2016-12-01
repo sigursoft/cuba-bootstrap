@@ -20,5 +20,5 @@ Gem::Specification.new do |gem|
   gem.add_development_dependency 'rack-test',  '~> 0.6'
 
   # ensure the gem is built out of versioned files
-  gem.files = Dir['README*', 'LICENSE*'] & `git ls-files -z`.split("\0")
+  gem.files = Dir['{assets,views}/**/*','README*','LICENSE*','application.rb','config.ru'] & `git ls-files -z`.split("\0")
 end
