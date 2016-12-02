@@ -14,7 +14,6 @@ Gem::Specification.new do |gem|
   gem.add_dependency 'rack',             '~> 2.0'
   gem.add_dependency 'cuba',             '~> 3.8'
   gem.add_dependency 'tilt',             '~> 2.0'
-  gem.add_dependency 'ohm',              '~> 3.0'
 
   gem.add_development_dependency 'cutest',     '~> 1.2'
   gem.add_development_dependency 'rack-test',  '~> 0.6'
