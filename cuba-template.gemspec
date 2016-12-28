@@ -1,10 +1,10 @@
 Gem::Specification.new do |gem|
-  gem.name    = 'cuba-template'
+  gem.name    = 'cuba-bootstrap'
   gem.version = 1.0
   gem.license = 'MIT'
   gem.date    = Date.today.to_s
 
-  gem.summary = 'Cuba Template'
+  gem.summary = 'Cuba Bootstrap'
   gem.description = 'Template for web application based on Cuba microframework'
 
   gem.authors  = ['Anton Kozik']
