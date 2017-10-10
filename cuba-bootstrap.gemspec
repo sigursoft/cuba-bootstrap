@@ -16,7 +16,7 @@ Gem::Specification.new do |gem|
   gem.add_dependency 'tilt',             '~> 2.0'
 
   gem.add_development_dependency 'cutest',     '~> 1.2'
-  gem.add_development_dependency 'rack-test',  '~> 0.6'
+  gem.add_development_dependency 'rack-test',  '~> 0.7'
 
   # ensure the gem is built out of versioned files
   gem.files = Dir['{assets,views}/**/*','README*','LICENSE*','application.rb','config.ru'] & `git ls-files -z`.split("\0")
