@@ -9,7 +9,7 @@ Gem::Specification.new do |gem|
 
   gem.authors  = ['Anton Kozik']
   gem.email    = 'pazitron@gmail.com'
-  gem.homepage = 'http://github.com/twitarchuk/cuba-template'
+  gem.homepage = 'http://github.com/twitarchuk/cuba-bootstrap'
 
   gem.add_dependency 'rack',             '~> 2.0'
   gem.add_dependency 'cuba',             '~> 3.8'
